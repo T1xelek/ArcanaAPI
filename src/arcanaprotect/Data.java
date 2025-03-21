@@ -7,18 +7,34 @@ public class Data {
 
     /**
      * Айди пользователя
+     * -- GETTER --
+     *  Возвращает айди пользователя
+     *
+
      */
     private int id;
     /**
      * Логин пользователя
+     * -- GETTER --
+     *  Возвращает имя пользователя
+     *
+
      */
     private String name;
     /**
      * Роль пользователя (Enum)
+     * -- GETTER --
+     *  Возвращает роль пользователя (Enum)
+     *
+
      */
-    private Role role;
+    private String role;
     /**
      * Дата окончания подписки
+     * -- GETTER --
+     *  Возвращает дату окончания подписки
+     *
+
      */
     private Date expirationDate;
 
@@ -35,15 +51,6 @@ public class Data {
     }
 
     /**
-     * Возвращает айди пользователя
-     * @return id
-     */
-
-    public int getId() {
-        return id;
-    }
-
-    /**
      * Устанавливает айди пользователю
      * @return this
      */
@@ -51,15 +58,6 @@ public class Data {
     public Data setId(int id) {
         this.id = id;
         return this;
-    }
-
-    /**
-     * Возвращает имя пользователя
-     * @return name
-     */
-
-    public String getName() {
-        return name;
     }
 
     /**
@@ -73,41 +71,13 @@ public class Data {
     }
 
     /**
-     * Возвращает роль пользователя (Enum)
-     * @return role
-     */
-
-    public Role getRole() {
-        return role;
-    }
-
-    /**
-     * Возвращает роль пользователя (String)
-     * @return roleName
-     */
-
-    public String getRoleName() {
-        String role = getRole().name();
-        return Character.toString(role.toLowerCase().charAt(0)).toUpperCase() + role.toLowerCase().substring(1);
-    }
-
-    /**
      * Устанавливает роль пользователю
      * @return this
      */
 
-    public Data setRole(Role role) {
+    public Data setRole(String role) {
         this.role = role;
         return this;
-    }
-
-    /**
-     * Возвращает дату окончания подписки
-     * @return expirationDate
-     */
-
-    public Date getExpirationDate() {
-        return expirationDate;
     }
 
     /**
@@ -118,5 +88,21 @@ public class Data {
     public Data setExpirationDate(Date expirationDate) {
         this.expirationDate = expirationDate;
         return this;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Date getExpirationDate() {
+        return expirationDate;
+    }
+
+    public String getRole() {
+        return role;
     }
 }

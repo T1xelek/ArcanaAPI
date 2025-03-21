@@ -1,7 +1,6 @@
 package example;
 
 import arcanaprotect.Data;
-import arcanaprotect.Role;
 
 import java.util.Date;
 
@@ -11,13 +10,13 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         /// Для работы в режиме разработки клиента
-        Data.getInstance().setName("Test").setId(1).setRole(Role.DEVELOPER).setExpirationDate(new Date());
+        Data.getInstance().setName("Test").setId(1).setRole("DEVELOPER").setExpirationDate(new Date());
 
         /// Пример получения информации о юзере
         Data data = Data.getInstance();
         String name = data.getName();
         int id = data.getId();
-        String role = data.getRoleName();
+        String role = data.getRole();
         Date expirationDate = data.getExpirationDate();
 
         /// Выводим данные
